@@ -1,0 +1,8 @@
+<h1>Login</h1>
+<%= form_with model: @user, url: log_in_path do |form| %>
+	<div class="signup-form">
+		<%= form.text_field :email, class: 'form-field', placeholder: 'Email' %>
+		<%= form.password_field :password, class: 'form-field', placeholder: 'Password' %>
+		<%= form.submit "Login", class: "form-button" %>
+	</div>
+<% end %>

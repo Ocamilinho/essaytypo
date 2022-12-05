@@ -1,0 +1,20 @@
+<header class="cabecalho">
+	<div class="logo-div">
+		<%=image_tag("ruby.png", class: "img-logo-nav")%>
+		<%= link_to 'RubyOnHelper', root_url, class: "logo-nav" %>
+	</div>
+	<div>
+		<ul class="lista-nav">
+			<%= link_to 'Contato', contato_path, class: "item-nav" %>
+			<%= link_to 'Sobre', sobre_path, class: 'item-nav' %>
+
+			<% if @user %>
+				<%= button_to @user.email, root_url,  class: 'item-nav-logout' %>
+				<%= button_to 'Logout', logout_path, method: :delete,  class: 'item-nav-logout' %>
+			<% else %>
+				<%= link_to 'Login', log_in_path, class: 'item-nav' %>
+				<%= link_to 'SignIn', sign_up_path, class: 'item-nav' %>
+			<% end %>
+		</ul>
+	</div>
+</header>
