@@ -1,0 +1,28 @@
+<h1>Nova Pergunta??</h1>
+<div class="form">
+<%= form_with model: @question, url: new_question_path do |f| %>
+	<div class="signup-form">
+		<div class="row-question">
+			<div class="column-field-question">
+				<h2>Titulo</h2>
+			<%= f.text_field :title, class: 'form-field'%>
+			</div>
+			<div class="column-field-question">
+				<h2>Descrição</h2>
+			<%= f.text_field :description, class: 'form-field'%>
+			</div>
+		</div>
+		<div class="field-question">
+			<h2>Problema</h2>
+			<%= f.text_area :problem, class: 'text-area-question', placeholder: "Escreva o problema com maior detalhamento possivel" %>
+		</div>
+		<%= f.submit "Enviar", class: "form-button" %>
+	</div>
+<% end %>
+<div class="hints_form">
+	<div>
+		<h1>Dica01</h1>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis culpa excepturi a tempore dolore ratione, inventore aliquid, necessitatibus ullam. Accusantium ex vero totam, dignissimos quae sit quaerat odio consequatur exercitationem.</p>
+	</div>
+</div>
+</div>

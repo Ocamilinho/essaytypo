@@ -5,11 +5,11 @@
 	</div>
 	<div>
 		<ul class="lista-nav">
-			<%= link_to 'Contato', contato_path, class: "item-nav" %>
+			<%= link_to 'Questões', questions_path, class: "item-nav" %>
 			<%= link_to 'Sobre', sobre_path, class: 'item-nav' %>
 
-			<% if @user %>
-				<%= button_to @user.email, root_url,  class: 'item-nav-logout' %>
+			<% if Current.user %>
+				<%= button_to Current.user.email, show_user_path, method: :get,  class: 'item-nav-logout' %>
 				<%= button_to 'Logout', logout_path, method: :delete,  class: 'item-nav-logout' %>
 			<% else %>
 				<%= link_to 'Login', log_in_path, class: 'item-nav' %>

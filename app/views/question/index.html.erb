@@ -1,0 +1,19 @@
+<div class="show-title">
+<h1>Questões</h1>
+<% if Current.user %>
+	<%= link_to "+",new_question_path, class: "button-new-show" %>
+<% end %>
+</div>
+<% @question.each do |q| %>
+    <div class="questao-show">
+		<div class="static-show">
+			<h2><%= q.title %></h1>
+			<p><%= q.description%></p>
+		</div>
+		<% if Current.user %>
+		<%= link_to "Responder", root_url, class: "button-show" %>
+		<% else %>
+		<%= link_to "Saiba mais!", root_url, class: "button-show" %>
+		<% end %>
+	</div>
+  <% end %>

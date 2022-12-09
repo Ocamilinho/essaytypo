@@ -1,10 +1,10 @@
 <h1>Sign Up</h1>
 <%= form_with model: @user, url: sign_up_path do |form| %>
 	<div class="signup-form">
-		<%= form.text_field :name, class: 'form-field', placeholder: 'Name' %>
+		<%= form.text_field :name, class: 'form-field', placeholder: 'Nome' %>
 		<%= form.text_field :email, class: 'form-field', placeholder: 'Email' %>
-		<%= form.password_field :password, class: 'form-field', placeholder: 'Password' %>
-		<%= form.password_field :password_confirmation, class: 'form-field', placeholder: 'Password Confirm' %>
+		<%= form.password_field :password, class: 'form-field', placeholder: 'Senha' %>
+		<%= form.password_field :password_confirmation, class: 'form-field', placeholder: 'Digite a senha novamente' %>
 		<%= form.submit "Cadastrar", class: "form-button" %>
 	</div>
 		<% if @user.errors.any? %>

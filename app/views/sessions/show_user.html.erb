@@ -1,0 +1,4 @@
+<h1>Olá, <%=Current.user.name%></h1>
+<h2>Entrou em <%=Current.user.created_at%></h2>
+<%= button_to 'Sair', logout_path,method: :delete ,class: "form-button" %>
+

@@ -13,9 +13,14 @@ Rails.application.routes.draw do
 
   get "log_in", to: "sessions#new"
   post "log_in", to: "sessions#create"
-
+  get "show_user", to: "sessions#show_user"
+  get "edit_user", to: "sessions#edit_user"
   delete "logout", to: "sessions#destroy"
 
+  get "new_question", to: "question#new"
+  post "new_question", to: "question#create"
+  get "questions", to: "question#index"
+
   resources :users
-  
+  resources :questions
 end

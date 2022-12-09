@@ -15,4 +15,8 @@ class SessionsController < ApplicationController
 		session[:user_id] = nil
 		redirect_to root_path, notice: "Logout sucessfull"
 	end
+
+	def show_user
+	end
+
 end
