@@ -11,9 +11,9 @@
 			<p><%= q.description%></p>
 		</div>
 		<% if Current.user %>
-		<%= link_to "Responder", root_url, class: "button-show" %>
+		<%= link_to "Responder", q, class: "button-show" %>
 		<% else %>
-		<%= link_to "Saiba mais!", root_url, class: "button-show" %>
+		<%= link_to "Saiba mais!", q,  class: "button-show" %>
 		<% end %>
 	</div>
   <% end %>

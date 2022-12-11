@@ -5,16 +5,18 @@
 	</div>
 	<div>
 		<ul class="lista-nav">
-			<%= link_to 'Questões', questions_path, class: "item-nav" %>
-			<%= link_to 'Sobre', sobre_path, class: 'item-nav' %>
+			<%= link_to 'Questões', questions_path, class: "item-nav hidden-phone" %>
+			<%= link_to 'Sobre', sobre_path, class: 'item-nav hidden-phone' %>
 
 			<% if Current.user %>
-				<%= button_to Current.user.email, show_user_path, method: :get,  class: 'item-nav-logout' %>
-				<%= button_to 'Logout', logout_path, method: :delete,  class: 'item-nav-logout' %>
+				<%= button_to Current.user.email, show_user_path, method: :get,  class: 'item-nav-logout hidden-phone' %>
+				<%= button_to 'Logout', logout_path, method: :delete,  class: 'item-nav-logout hidden-phone' %>
 			<% else %>
-				<%= link_to 'Login', log_in_path, class: 'item-nav' %>
-				<%= link_to 'SignIn', sign_up_path, class: 'item-nav' %>
+				<%= link_to 'Login', log_in_path, class: 'item-nav hidden-phone' %>
+				<%= link_to 'SignIn', sign_up_path, class: 'item-nav hidden-phone' %>
 			<% end %>
+
+			<%=image_tag("menu.png", class: "menu-nav hidden-pc")%>
 		</ul>
 	</div>
 </header>

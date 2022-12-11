@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get "new_question", to: "question#new"
   post "new_question", to: "question#create"
   get "questions", to: "question#index"
+  get '/show/:id', to: 'question#show', as: :question
+
 
   resources :users
   resources :questions
