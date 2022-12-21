@@ -1,7 +1,7 @@
 <header class="cabecalho">
 	<div class="logo-div">
 		<%=image_tag("ruby.png", class: "img-logo-nav")%>
-		<%= link_to 'RubyOnHelper', root_url, class: "logo-nav" %>
+		<%= link_to 'EssayTypo', root_url, class: "logo-nav" %>
 	</div>
 	<div>
 		<ul class="lista-nav">
@@ -13,7 +13,7 @@
 				<%= button_to 'Logout', logout_path, method: :delete,  class: 'item-nav-logout hidden-phone' %>
 			<% else %>
 				<%= link_to 'Login', log_in_path, class: 'item-nav hidden-phone' %>
-				<%= link_to 'SignIn', sign_up_path, class: 'item-nav hidden-phone' %>
+				<%= link_to 'SignUp', sign_up_path, class: 'item-nav hidden-phone' %>
 			<% end %>
 
 			<%=image_tag("menu.png", class: "menu-nav hidden-pc")%>

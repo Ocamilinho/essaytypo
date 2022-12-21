@@ -34,7 +34,7 @@
 --verdesub: #008722;
 --marromsub: #964F13;
 --amarelosub: #8E821B;
---vermelhosub: #A0020C;
+--vermelhosub: #326d9e;
 --azulsub: #005F85;
 
 }
@@ -177,8 +177,7 @@ body{
 }
 
 .text-area-question{
-	min-width: 300px;
-	width: 80vw;
+	width: 622px;
 	height: 30vh;
 	padding: 10px;
 	border: none;
@@ -318,6 +317,20 @@ hr{
 	display: none;
 }
 
+.faq-div{
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+}
+
+.botao-faq{
+	width: 300px;
+	height: 60px;
+	background-color: var(--vermelhosub);
+	border: none;
+
+	box-shadow: 4px 4px 0px var(--branco);
+}
 
 
 @media screen and (max-width: 700px){
