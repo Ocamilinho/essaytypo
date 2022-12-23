@@ -1,7 +1,9 @@
 <div class="show-title">
-<h1>Questões</h1>
+<h1>Redações</h1>
 <% if Current.user %>
 	<%= link_to "+",new_question_path, class: "button-new-show" %>
+	<% else %>
+	<h2>(Logue para adicionar redações)</h2>
 <% end %>
 </div>
 <% @question.each do |q| %>
@@ -11,7 +13,7 @@
 			<p><%= q.description%></p>
 		</div>
 		<% if Current.user %>
-		<%= link_to "Responder", q, class: "button-show" %>
+		<%= link_to "Ler", q, class: "button-show" %>
 		<% else %>
 		<%= link_to "Saiba mais!", q,  class: "button-show" %>
 		<% end %>
